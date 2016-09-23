@@ -130,15 +130,6 @@ class Smartsupp_Admin {
 			array( $this, 'display_plugin_admin_page' )
 		);
 
-		add_menu_page(
-			__( 'Smartsupp Live Chat - Settings', $this->plugin_slug ),
-			__( 'Smartsupp Chat', $this->plugin_slug ),
-			'manage_options',
-			$this->plugin_slug,
-			array( $this, 'display_plugin_admin_page' ),
-			plugins_url( 'images/icon-20x20.png', dirname(__FILE__))
-		);
-
 	}
 
 	/**
