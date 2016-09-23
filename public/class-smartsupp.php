@@ -122,8 +122,10 @@ class Smartsupp
             return;
         }
 
+        $gtm_ua = esc_attr($smartsupp['gtm-ua']);
+
         // set key
-        $code = new \Smartsupp\ChatGenerator($chat_id);
+        $code = new \Smartsupp\ChatGenerator($chat_id, $gtm_ua);
 
         // set cookie domain
         $code->setCookieDomain(parse_url(get_site_url(), PHP_URL_HOST));

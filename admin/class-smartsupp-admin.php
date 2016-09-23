@@ -93,6 +93,7 @@ class Smartsupp_Admin {
 		$smartsupp = array();
 		$smartsupp['active'] = true;
 		$smartsupp['chat-id'] = null;
+        $smartsupp['gtm-ua'] = null;
 		$smartsupp['active-vars'] = true;
 		$smartsupp['optional-code'] = null;
 		$smartsupp['wp-vars']['name'] = true;
@@ -184,6 +185,15 @@ class Smartsupp_Admin {
 					'size' => 50
 				)
 			),
+            'gtm-ua' => array(
+                'title' => __('Google Analytics ID', $this->plugin_slug),
+                'field_options' => array(
+                    'type' => 'text',
+                    'name' => 'smartsupp[gtm-ua]',
+                    'value' => $smartsupp['gtm-ua'],
+                    'size' => 15
+                )
+            ),
 			'optional-code' => array(
 				'title' => __('Enter optional API code', $this->plugin_slug ),
 				'field_options' => array(

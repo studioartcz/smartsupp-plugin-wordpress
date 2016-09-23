@@ -131,9 +131,15 @@ class ChatGenerator
      */
     protected $hide_widget = false;
 
-    public function __construct($key = null)
+    /**
+     * ChatGenerator constructor.
+     * @param null $key
+     * @param null $ua
+     */
+    public function __construct($key = null, $ua = null)
     {
         $this->key = $key;
+        $this->setGoogleAnalytics($ua);
     }
 
     /**
